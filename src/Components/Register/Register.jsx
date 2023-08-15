@@ -14,7 +14,7 @@ export default function Register() {
 
   async function handleRegister(values) {
     setisLoading(true)
-    let {data} = await axios.post(`https://route-ecommerce.onrender.com/api/v1/auth/signup`, values)
+    let {data} = await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signup`, values)
 
     if (data.message === "success") {
       setisLoading(false)

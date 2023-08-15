@@ -8,7 +8,7 @@ export default function Brands() {
   const [brandList, setbrandList] = useState([])
 
   async function getBrands() {
-    let { data } = await axios.get(`https://route-ecommerce.onrender.com/api/v1/brands`)
+    let { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/brands`)
     setbrandList(data.data)
   }
 

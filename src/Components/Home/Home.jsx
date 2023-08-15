@@ -11,15 +11,16 @@ export default function Home() {
   let {addToCart} = useContext(CartContext)
   const [productListSlider, setproductListSlider] = useState([])
   const [allProductsList, setallProductsList] = useState([])
-
+//https://ecommerce.routemisr.com
+//{{BaseUrl}}/api/v1/categories
   async function getProductsSlider() {
-    let { data } = await axios.get(`https://route-ecommerce.onrender.com/api/v1/categories`)
+    let { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/categories`)
     setproductListSlider(data.data)
     // console.log(data.data);
   }
 
   async function getAllProducts() {
-    let { data } = await axios.get(`https://route-ecommerce.onrender.com/api/v1/products`)
+    let { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/products`)
     setallProductsList(data.data)
     // console.log(data.data);
   }

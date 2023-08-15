@@ -12,7 +12,7 @@ export function CartContextProvider(props) {
     }
 
     function addToCart(x) {
-        return axios.post(`https://route-ecommerce.onrender.com/api/v1/cart`, {
+        return axios.post(`https://ecommerce.routemisr.com/api/v1/cart`, {
             productId: x
         }, {
             headers: headers
@@ -20,19 +20,19 @@ export function CartContextProvider(props) {
     }
 
     function getLoggedCart(x) {
-        return axios.get(`https://route-ecommerce.onrender.com/api/v1/cart`, {
+        return axios.get(`https://ecommerce.routemisr.com/api/v1/cart`, {
             headers: headers
         }).then((response) => response).catch((error) => error)
     }
 
     function removeProductFromCart(productId) {
-        return axios.delete(`https://route-ecommerce.onrender.com/api/v1/cart/${productId}`, {
+        return axios.delete(`https://ecommerce.routemisr.com/api/v1/cart/${productId}`, {
             headers: headers
         }).then((response) => response).catch((error) => error)
     }
 
     function increaseProduct(productId , count) {
-        return axios.put(`https://route-ecommerce.onrender.com/api/v1/cart/${productId}`, {
+        return axios.put(`https://ecommerce.routemisr.com/api/v1/cart/${productId}`, {
             count : count
         }, {
             headers: headers
